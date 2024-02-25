@@ -88,7 +88,8 @@ main{
     color: #C4C4C4;
 }
 
-.banner-main{
+.banner-main {
+    position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
@@ -96,52 +97,103 @@ main{
 
 .banner1{
     grid-row: 1 / 3;
-    display: inline-block;
-    position: relative;
-    z-index: 0;
-}
-
-.titulo-banner1{
-    color: #FEFBFB;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-weight: 400;
-    line-height: 17.5px;
-    position: absolute;
-    background-color: #8257E6;
-    border-radius: 3px;
-    padding: 5px 10px;
-    margin: 17px 30px;
-
-}
-
-.titulo-banner2{
-    color: #FEFBFB;
-    font-size: 14px;
-    font-family: "Lexend Deca", sans-serif;
-    font-weight: 400;
-    line-height: 17.5px;
-    position: absolute;
-    background-color: #8257E6;
-    border-radius: 3px;
-    padding: 5px 10px;
-    margin: 17px 30px;
+    grid-column: 1 / 2;
 }
 
 .banner2{
-    display: inline-block;
-    position: relative;
-    z-index: -2;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
 }
-.titulo-banner2{
+
+.banner3{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.banner1,
+.banner2,
+.banner3 {
+    position: relative;
+    overflow: hidden; /* Garante que o gradiente não ultrapasse as bordas da div */
+}
+
+.banner1::before,
+.banner2::before,
+.banner3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #13131F 0%, rgba(19, 19, 31, 0) 100%);
+    z-index: 1; /* Garante que o gradiente esteja por cima da imagem */
+}
+
+
+.banner1 img,
+.banner2 img,
+.banner3 img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Para manter a proporção original da imagem */
+    z-index: 2; /* Garante que a imagem esteja por cima do gradiente */
+}
+
+.titulo-banner1{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #FEFBFB;
     font-size: 14px;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     line-height: 17.5px;
-    position: absolute;
     background-color: #8257E6;
     border-radius: 3px;
     padding: 5px 10px;
-    margin: 17px 300px;
+}
+
+.titulo-banner2,
+.titulo-banner3 {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FEFBFB;
+    font-size: 12px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    line-height: 15px;
+    background-color: #8257E6;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.banner1 p {
+    position: absolute;
+    bottom: 5%; 
+    left: 5%; 
+    color: #FEFBFB; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 400;
+    line-height: 34px;
+    z-index: 2; /* Garante que o parágrafo esteja acima do gradiente, mas abaixo da imagem */
+}
+
+.banner2 p,
+.banner3 p{
+    position: absolute;
+    bottom: 5%; 
+    left: 5%; 
+    color: #FEFBFB; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 13px; /* Tamanho da fonte */
+    font-weight: 400;
+    line-height: 20px;
+    z-index: 2; /* Garante que o parágrafo esteja acima do gradiente, mas abaixo da imagem */
 }
