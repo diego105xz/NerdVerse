@@ -93,6 +93,7 @@ main{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+    margin-bottom: 60px;
 }
 
 .banner1{
@@ -119,7 +120,8 @@ main{
 
 .banner1::before,
 .banner2::before,
-.banner3::before {
+.banner3::before,
+.anime-banner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -156,7 +158,8 @@ main{
 }
 
 .titulo-banner2,
-.titulo-banner3 {
+.titulo-banner3,
+.anime-banner span {
     position: absolute;
     top: 5%;
     left: 5%;
@@ -185,7 +188,8 @@ main{
 }
 
 .banner2 p,
-.banner3 p{
+.banner3 p,
+.anime-banner p{
     position: absolute;
     bottom: 5%; 
     left: 5%; 
@@ -197,3 +201,31 @@ main{
     line-height: 20px;
     z-index: 2; /* Garante que o parágrafo esteja acima do gradiente, mas abaixo da imagem */
 }
+
+.conteudo {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.series-filmes{
+    width: 100%;
+    height: 100vh;
+    background-color: #8257E6;
+}
+
+.TopAnimes h2{
+    color: #FEFBFB;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.anime-banner{
+    position: relative;
+    overflow: hidden; /* Garante que o gradiente não ultrapasse as bordas da div */
+    margin-bottom: 60px;
+}
+
