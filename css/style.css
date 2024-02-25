@@ -1,0 +1,147 @@
+body{
+    background-color:#13131F;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* inicio do header */
+
+header{
+    max-width: 1119px;
+    margin: 30px auto 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca{
+    color: #8257E6;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu-lista{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    list-style: none;
+}
+
+.menu-lista a{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #C4C4C4;
+    text-decoration: none;
+}
+
+.menu-lista a:hover{
+    border-bottom: 2px solid #8257E6;
+}
+
+.conta{
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.5px;
+    color: #FEFBFB;
+    text-decoration: none;
+    border: 1px solid #8257E6;
+    padding: 5px 20px 5px 20px;
+    border-radius: 30px;
+}
+
+/* inicio da main */
+
+main{
+    max-width: 1119px;
+    margin: 0px auto;    
+}
+
+.titulo-main{
+    margin-bottom: 60px;
+}
+
+.titulo-main h1{
+    margin: 0px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    color: #FEFBFB;
+}
+
+.titulo-main p{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: #C4C4C4;
+}
+
+.banner-main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.banner1{
+    grid-row: 1 / 3;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+}
+
+.titulo-banner1{
+    color: #FEFBFB;
+    font-size: 14px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    line-height: 17.5px;
+    position: absolute;
+    background-color: #8257E6;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 17px 30px;
+
+}
+
+.titulo-banner2{
+    color: #FEFBFB;
+    font-size: 14px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    line-height: 17.5px;
+    position: absolute;
+    background-color: #8257E6;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 17px 30px;
+}
+
+.banner2{
+    display: inline-block;
+    position: relative;
+    z-index: -2;
+}
+.titulo-banner2{
+    color: #FEFBFB;
+    font-size: 14px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    line-height: 17.5px;
+    position: absolute;
+    background-color: #8257E6;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 17px 300px;
+}
