@@ -121,7 +121,8 @@ main{
 .banner1::before,
 .banner2::before,
 .banner3::before,
-.anime-banner::before {
+.anime-banner::before,
+.cardImg::before {
     content: '';
     position: absolute;
     top: 0;
@@ -221,6 +222,15 @@ main{
     font-weight: 400;
     font-size: 24px;
     line-height: 20px;
+    margin-bottom: 10px;
+    /* border-bottom: 3px solid #8257E6; */
+}
+
+.detalhe{
+    width: 75%;
+    height: 3px;
+    background-color: #8257E6;
+    margin-bottom: 20px;
 }
 
 .anime-banner{
@@ -228,4 +238,9 @@ main{
     overflow: hidden; /* Garante que o gradiente não ultrapasse as bordas da div */
     margin-bottom: 60px;
 }
+
+.anime-banner img{
+    max-width: 366px;
+}
+
 
