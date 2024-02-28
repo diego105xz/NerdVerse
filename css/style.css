@@ -295,7 +295,7 @@ main{
     font-size: 13px;
     line-height: 20px;
     color: #FEFBFB;
-    width: 60ch;
+    max-width: 60ch;
 }
 
 .cardInfo p{
@@ -351,7 +351,7 @@ main{
     margin-bottom: 20px;
 }
 
-.CardsGames{
+.cardsGames{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
@@ -403,4 +403,57 @@ footer p{
     font-size: 16px;
     line-height: 24px;
     color: #C4C4C4;
+}
+
+
+
+/* responsivo */
+
+@media (max-width: 1150px) {
+    
+    body{
+        padding: 0px 30px;
+    }
+
+    .menu-lista{
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+        list-style: none;
+    }
+
+    .banner-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .banner2, .banner3{
+        display: none;
+    }
+    
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .TopAnimes{
+        display: none;
+    }
+
+    .cardsGames{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .cardGame img{
+        position: relative;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+
 }
