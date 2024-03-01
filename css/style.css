@@ -13,6 +13,7 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;  
+    position: relative;
 }
 
 .marca{
@@ -23,20 +24,24 @@ header{
     font-family: "Lexend Deca", sans-serif;
 }
 
-.menu{
+#btn-mobile{
+    display: none;
+}
+
+#nav-menu{
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.menu-lista{
+#menu{
     display: flex;
     justify-content: space-around;
     gap: 50px;
     list-style: none;
 }
 
-.menu-lista a{
+#menu a{
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -44,7 +49,7 @@ header{
     text-decoration: none;
 }
 
-.menu-lista a:hover{
+#menu a:hover{
     border-bottom: 2px solid #8257E6;
 }
 
@@ -58,17 +63,12 @@ header{
     border: 1px solid #8257E6;
     padding: 5px 10px 5px 10px;
     border-radius: 30px;
-    width: 120px;
     display: inline-block;
-    margin-left: 40%;
     text-align: center;
+    position: absolute;
+    right: 0px;
 }
 
-.minha_conta{
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
 
 /* inicio da main */
 
@@ -415,11 +415,9 @@ footer p{
     color: #C4C4C4;
 }
 
-#btn-mobile{
-    display: none;
+a:hover {
+    background: rgba(0, 0, 0, 0.05);
 }
-
-
 /* responsivo */
 
 @media (max-width: 1150px) {
@@ -429,10 +427,10 @@ footer p{
     }
 
     .conta{
-        margin-left: 30%;
+        position: absolute;
     }
 
-    .menu-lista{
+    #menu{
         display: flex;
         justify-content: space-around;
         gap: 25px;
@@ -480,39 +478,130 @@ footer p{
         grid-template-rows: 1fr 1fr;
         flex-wrap: wrap;
         align-items: center;  
+        gap: 10px;
     }
 
-    .minha_conta{
-        margin-top: 10px;
-        text-align: center;
-        width: 100%;
-        grid-column: 1 / 3;
-        grid-row: 2 / 3 ;
+    #btn-mobile{
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        border: none;
     }
+
 
     .conta{
-        font-family: "Lexend Deca", sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17.5px;
-        color: #FEFBFB;
-        text-decoration: none;
-        border: 1px solid #8257E6;
-        padding: 5px 20px 5px 20px;
-        border-radius: 30px;
-        width: 100%;
-        display: inline-block;
+        position: relative;
+        width:95%;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3 ;
         margin: 0 auto;
     }
 /* menu mobile inicio */
+
+    /* #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        right: 0px;
+        background: #18182c;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 5px;
+        transition: .6s;
+        height: 300px;
+        z-index: 1000;
+    }
+  
+    #menu li{
+        padding-left: 1rem;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
+    #menu li:hover{
+        background: #d9d9e47c;
+    }
+
+    #nav-menu.ativo #menu{
+        display: flex;
+    }
+
+    
+    #nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        justify-self: end; /* Movendo o menu para o canto direito 
+    } */
+
+    #menu{
+        display: block;
+        position: absolute;
+        width: 30%;
+        top:20px;
+        right: 0px;
+        background: #18182c;
+        height: 0px;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+    
+    #nav.ativo #menu{
+        height: 300px;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu li{
+        padding-bottom: 5px;
+    }
+
     #btn-mobile{
-        display: block;    
+        display: flex;    
+        padding: .5rem 1rem;
+        font-size: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
     }
 
-    .menu-lista{
-        display: none;
+    #hamburguer{
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+        color: white;
     }
 
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor; /*variavel que pegar a cor do elemnto pai */
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.ativo #hamburguer{
+        border-top-color: transparent;
+    }
+    
+    #nav.ativo #hamburguer::after{
+        transform: rotate(135deg);
+    }
+
+    #nav.ativo #hamburguer::before{
+        transform: rotate(-135deg);
+        top: 7px;
+    }
 
 /* menu mobile fim */
 

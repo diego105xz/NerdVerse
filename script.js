@@ -1,8 +1,8 @@
 const btnMobile = document.getElementById('btn-mobile');
 
 function ativarMenu(){
-    const menu = document.querySelector('menu');
-    menu.classList.toggle('ativo');
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('ativo');
 }
 
 btnMobile.addEventListener('click', ativarMenu);
