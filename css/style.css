@@ -364,7 +364,7 @@ main{
 .cardsGames{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 20px;
 }
 
 
@@ -471,14 +471,14 @@ a:hover {
 @media (max-width: 768px) {
 
     header{
-        max-width: 1119px;
-        margin: 30px auto 120px;
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         flex-wrap: wrap;
-        align-items: center;  
         gap: 10px;
+    }
+
+    .banner-main {
+        margin-bottom: 30px;
     }
 
     #btn-mobile{
@@ -497,43 +497,6 @@ a:hover {
         margin: 0 auto;
     }
 /* menu mobile inicio */
-
-    /* #menu{
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 50px;
-        right: 0px;
-        background: #18182c;
-        flex-direction: column;
-        border: 1px solid black;
-        border-radius: 5px;
-        transition: .6s;
-        height: 300px;
-        z-index: 1000;
-    }
-  
-    #menu li{
-        padding-left: 1rem;
-        margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, .05);
-    }
-
-    #menu li:hover{
-        background: #d9d9e47c;
-    }
-
-    #nav-menu.ativo #menu{
-        display: flex;
-    }
-
-    
-    #nav-menu {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-        justify-self: end; /* Movendo o menu para o canto direito 
-    } */
 
     #menu{
         display: block;
@@ -604,5 +567,130 @@ a:hover {
     }
 
 /* menu mobile fim */
+
+    .banner1 p {
+        position: absolute;
+        bottom: 5%; 
+        left: 5%; 
+        color: #FEFBFB; /* Cor do texto */
+        padding: 5px 10px; /* Espaçamento interno */
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 16px; /* Tamanho da fonte */
+        font-weight: 400;
+        line-height: 24px;
+        z-index: 2; /* Garante que o parágrafo esteja acima do gradiente, mas abaixo da imagem */
+    }
+
+    .cardInfo h3, .cardInfo p{
+        max-width: 40ch;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    
+    header{
+        margin: 30px auto 60px;
+    }
+
+    .marca{
+        font-size: 22px;
+        line-height: 27.5px;
+    }
+
+    .conta{
+        padding: 8px 10px 8px 10px;
+    }
+    
+    .titulo-main h1{
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    
+    .titulo-main p{
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+
+    .banner1 span{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .banner1 p {
+        font-size: 14px; /* Tamanho da fonte */
+        font-weight: 400;
+        line-height: 18px;
+        z-index: 2; /* Garante que o parágrafo esteja acima do gradiente, mas abaixo da imagem */
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: 144px 1fr;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .cardInfo h3{
+        font-size: 14px;
+        line-height: 17.5px;
+    }
+
+    .cardInfo p{
+        display: none;
+    }
+
+    .cardInfo span{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    .cardInfo a{
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12.1px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .cardImg img{
+        width: 144px;
+        height: 110px;
+        object-fit: cover;
+    }
+
+    .cardImg span{
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12.5px;
+    }
+
+    .conteudo2 h3{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+
+    .cardsGames{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    footer h5{
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 27.5px;
+    }
+
+    footer p{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19.6px;
+    }
 
 }
