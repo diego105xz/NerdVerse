@@ -10,9 +10,9 @@ body{
 header{
     max-width: 1119px;
     margin: 30px auto 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;  
 }
 
 .marca{
@@ -56,8 +56,18 @@ header{
     color: #FEFBFB;
     text-decoration: none;
     border: 1px solid #8257E6;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 10px 5px 10px;
     border-radius: 30px;
+    width: 120px;
+    display: inline-block;
+    margin-left: 40%;
+    text-align: center;
+}
+
+.minha_conta{
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 /* inicio da main */
@@ -405,6 +415,9 @@ footer p{
     color: #C4C4C4;
 }
 
+#btn-mobile{
+    display: none;
+}
 
 
 /* responsivo */
@@ -415,10 +428,14 @@ footer p{
         padding: 0px 30px;
     }
 
+    .conta{
+        margin-left: 30%;
+    }
+
     .menu-lista{
         display: flex;
         justify-content: space-around;
-        gap: 40px;
+        gap: 25px;
         list-style: none;
     }
 
@@ -454,6 +471,49 @@ footer p{
 
 
 @media (max-width: 768px) {
-    
+
+    header{
+        max-width: 1119px;
+        margin: 30px auto 120px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        flex-wrap: wrap;
+        align-items: center;  
+    }
+
+    .minha_conta{
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3 ;
+    }
+
+    .conta{
+        font-family: "Lexend Deca", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17.5px;
+        color: #FEFBFB;
+        text-decoration: none;
+        border: 1px solid #8257E6;
+        padding: 5px 20px 5px 20px;
+        border-radius: 30px;
+        width: 100%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+/* menu mobile inicio */
+    #btn-mobile{
+        display: block;    
+    }
+
+    .menu-lista{
+        display: none;
+    }
+
+
+/* menu mobile fim */
 
 }
