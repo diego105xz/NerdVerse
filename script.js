@@ -94,7 +94,7 @@ async function searchAnime() {
 
 const searchInput = document.getElementById('searchInput');
 let typingTimer;
-const doneTypingInterval = 1000; // Tempo de espera após a digitação (em milissegundos)
+const doneTypingInterval = 500; // Tempo de espera após a digitação (em milissegundos)
 
 window.onload = loadInitialAnimes;
 
