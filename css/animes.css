@@ -144,3 +144,80 @@
 .pagination button:hover{
     background-color: #8257e6;
 }
+
+
+
+@media (max-width: 800px) {
+    
+    .animes-banner-texto {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        z-index: 3;
+    }
+
+    .animes-banner h1{
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    
+    }
+    
+    .animes-banner span{
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .animes-banner {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 55%; /* Proporção de aspecto 4:3 (altura = largura * 3/4) */
+        overflow: hidden; /* Oculta as partes excedentes da imagem */
+    }
+    
+    .animes-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #13131F 0.01%, rgba(19, 19, 31, 0) 99.99%);
+        z-index: 2; /* Garante que o gradiente esteja por cima da imagem */
+    }
+    
+    .animes-banner img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* A imagem ocupará toda a largura do contêiner */
+        height: 100%; /* A imagem ocupará toda a altura do contêiner */
+        object-fit: cover; /* Ajusta a imagem ao contêiner, cortando as bordas */
+        z-index: 1; /* Garante que a imagem esteja por baixo do gradiente */
+    }
+    
+    .animes-banner-texto {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        z-index: 3;
+    }
+    
+    .animes-banner h1 {
+        font-size: 24px;
+        line-height: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .animes-banner span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+}
