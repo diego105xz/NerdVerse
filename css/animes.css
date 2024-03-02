@@ -1,0 +1,146 @@
+.animes-banner,
+.animeResult {
+    position: relative;
+    overflow: hidden; /* Garante que o gradiente não ultrapasse as bordas da div */
+}
+
+.animes-banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #13131F 0.01%, rgba(19, 19, 31, 0) 99.99%);
+    z-index: 1; /* Garante que o gradiente esteja por cima da imagem */
+}
+
+.animes-banner img{
+    display: block;
+    width: 100%;
+    height: 100%; /* Para manter a proporção original da imagem */
+    z-index: 2; /* Garante que a imagem esteja por cima do gradiente */
+}
+
+.animes-banner-texto{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    z-index: 3;
+}
+
+.animes-banner h1{
+    color: #FEFBFB;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    margin-bottom: 10px;
+
+}
+
+.animes-banner span{
+    color: #C4C4C4;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+/* pesquisa */
+.pesquisa{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 40px;
+}
+
+.pesquisa input{
+    height: 60px;
+    background-color: #282830;
+    border:none;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #989898;
+    padding-left: 5%;
+    margin-bottom: 60px;
+}
+
+.pesquisa img{
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: 30px;
+}
+
+
+.pesquisa img{
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    width: 30px;
+}
+
+#animeInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.animeResult {
+    position: relative;
+    overflow: hidden;
+}
+
+.animeResult img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.gradientOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #13131F 10%, rgba(19, 19, 31, 0) 100%);
+}
+
+.animeInfoOverlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    padding: 10px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+.pagination {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #282830;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #8257e6;
+    
+}
+
+.pagination button:hover{
+    background-color: #8257e6;
+}

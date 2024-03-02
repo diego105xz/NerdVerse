@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melhor Site de Animes, Games, series e filmes geek.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>NerdVerse</title>
+</head>
+<body>
+    <header>
+        <span class="marca">NerdVerse</span>
+        <nav id="nav">
+            <button id="btn-mobile">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="./animes.html">Animes</a></li>
+                <li><a href="#">Games</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="conta">Minha conta</a>
+    </header>
+    <main>
+        <section class="animes-secao">
+            <div class="animes-banner">
+                <img src="../img/tobi.png" alt="tobi">
+                <div class="animes-banner-texto">
+                    <h1>Animes</h1>
+                    <span>NerdVerse pode ser sua fonte de informações sobre <br>o mundo nerd e outros assuntos relacionados.</span>    
+                </div>
+            </div>
+            <div class="pesquisa">
+                <label for="search"></label>
+                <input type="search" id="searchInput" placeholder="Quer ajuda na procura? Pesquise aqui">
+                <img src="../img/lupa.png" alt="lupa">
+            </div>
+            <div id="animeInfo"></div>
+            <div class="pagination">
+                <button id="prevPage">⇽</button>
+                <button id="currentPage" disabled></button>
+                <button id="nextPage">⇾</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h5>NerdVerse</h5>
+        <p>Todas as imagens de filmes, séries e etc são marcas registradas<br>dos seus respectivos proprietários.</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
