@@ -115,6 +115,13 @@
     line-height: 20px;
 }
 
+.animeInfoOverlay h2{
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+}
+
 
 .pagination {
     margin-top: 50px;
@@ -179,6 +186,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 50px;
+    }
+
+    .animeInfoOverlay h2{
+        font-family: "Lexend Deca", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
     }
     
 
@@ -261,6 +275,13 @@
         object-fit: cover;
         height: auto;
         min-height: 250px;
+    }
+
+    .animeInfoOverlay h2{
+        font-family: "Lexend Deca", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
     }
     
 }
