@@ -69,13 +69,6 @@
     margin-bottom: 60px;
 }
 
-.pesquisa img{
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    width: 30px;
-}
-
 
 .pesquisa img{
     position: absolute;
@@ -168,6 +161,27 @@
         font-size: 14px;
         line-height: 16px;
     }
+
+    .pesquisa input{
+        height: 50px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .pesquisa img{
+        position: absolute;
+        top: 20%;
+        right: 2%;
+        width: 20px;
+    }
+
+    #animeInfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+    
+
 }
 
 @media (max-width: 600px) {
@@ -203,9 +217,11 @@
     
     .animes-banner-texto {
         position: absolute;
-        top: 15%;
+        top: 65px;
         left: 5%;
         z-index: 3;
+        width: 90%;
+        height: 100px;
     }
     
     .animes-banner h1 {
@@ -220,4 +236,39 @@
         line-height: 14px;
     }
 
+
+    .pesquisa input{
+        height: 40px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .pesquisa img{
+        position: absolute;
+        top: 17%;
+        right: 3%;
+        width: 15px;
+    }
+
+    #animeInfo {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .animeResult img {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+        min-height: 250px;
+    }
+    
+}
+
+
+@media (max-width:400px) {
+    .animes-banner span{
+        font-size: 10px;
+        line-height: 10px;
+    }
 }
