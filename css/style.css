@@ -343,6 +343,10 @@ main{
     text-align: center;
 }
 
+.cardInfo a:hover{
+    background-color: #672cf1;
+}
+
 .conteudo2{
     margin-bottom: 60px;
 }
@@ -421,6 +425,11 @@ footer p{
 a:hover {
     background: rgba(0, 0, 0, 0.05);
 }
+
+.modelo-img{
+    width: 100%;
+}
+
 /* responsivo */
 
 @media (max-width: 1150px) {
