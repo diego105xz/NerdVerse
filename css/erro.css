@@ -5,6 +5,16 @@ header{
     position: relative;
 }
 
+header a{
+    background: linear-gradient(180deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 85.42%);
+    -webkit-background-clip: text; /* Define a área de recorte do background para o texto */
+    background-clip: text; /* Define a área de recorte do background para o texto */
+    color: transparent; /* Torna o texto transparente */
+    -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente */
+    font-size: 16px;
+    line-height: 19.36px;
+}
+
 nav{
     position: absolute;
     right: 0;
