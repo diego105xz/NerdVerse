@@ -2,7 +2,7 @@
 
 Decidi criar 100 projetos front-end para mergulhar de vez na profissão. Cada código é um passo nessa jornada empolgante de aprendizado, rumo à expertise no desenvolvimento web.
 
-## NerdVerse é um site responsivo com aplicação de CSS Grid, Animações em JavaScript, Menu Hamburguer e o consumo de API na página de Animes.
+## O NerdVerse é um site do universo geek, que apresenta responsividade, utiliza CSS Grid e animações em JavaScript, conta com um menu hamburguer e integração de API na página de Animes.
 
 💡 Tecnologia usada: HTML, CSS e JavaScript <br>
 📑 Layout desenvolvido pelo iuri silva <br>
